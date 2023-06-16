@@ -7,6 +7,11 @@
   <title>Gestão Financeira - Login</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+  </style>
 </head>
 
 <body>
@@ -39,7 +44,7 @@
               Login
             </div>
             <div class="card-body">
-              <form>
+              <form id="loginForm">
                 <div class="form-group">
                   <label for="email">Email:</label>
                   <input type="email" class="form-control" id="email" placeholder="Digite seu email">
@@ -66,6 +71,22 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent form submission
+      
+      // Perform form validation
+      let email = document.getElementById("email").value;
+      let password = document.getElementById("password").value;
+      
+      if (email === "user@example.com" && password === "123") {
+        // Redirect to logged.html if login is successful
+        window.location.href = "logged.html";
+      } else {
+        alert("Login failed. Please check your email and password.");
+      }
+    });
+  </script>
 </body>
 
 </html>
