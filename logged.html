@@ -1,34 +1,48 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestão Financeira - Logado</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-
-
-  <title>Money Safe - Logado</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 </head>
 
 <body>
   <header>
-    <h1 class="clr_ltt">Bem-vindo ao Money Safe! </h1>
-    <nav>
-      <button onclick="location.href='index.html'" class="btn">Início</button>
-      <button onclick="location.href='about.html'" class="btn">Sobre</button>
-      <button onclick="location.href='login.html'" class="btn">Login</button>
-      <button onclick="location.href='register.html'" class="btn">Cadastro</button>
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Gestão Financeira</a>
+      <a href="#" class="btn btn-primary">Ver Gastos</a>
     </nav>
   </header>
 
-  <div class="container">
-    
-    <p>Você está logado!</p>
-    <!-- Conteúdo exclusivo para usuários logados -->
-    <p>Aqui você pode gerenciar suas finanças de forma eficiente.</p>
-  </div>
-  
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <div class="card text-center mt-5">
+            <div class="card-header">
+              Perfil Pessoal
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Bem-vindo(a)!</h5>
+              <p class="card-text">Aqui você pode gerenciar suas finanças pessoais, visualizar seus gastos, controlar seus
+                recibos e acompanhar gráficos estatísticos.</p>
+              <a href="#" class="btn btn-primary">Ver Gastos</a>
+            </div>
+            <div class="card-footer">
+              Criado por Hgz
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </body>
 
 </html>
