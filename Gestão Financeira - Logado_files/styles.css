@@ -17,10 +17,6 @@ body::before {
   z-index: -1;
 }
 
-.rotated-image {
-  transform: rotate(180deg); /* Define o ângulo de rotação desejado */
-}
-
 .card {
   background-color: #4d4c4c6e;
   color: #2e2e2e;

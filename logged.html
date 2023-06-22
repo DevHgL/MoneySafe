@@ -7,33 +7,71 @@
   <title>Gestão Financeira - Logado</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <style>
+    #chart {
+      height: 100px;
+    }
+  </style>
 </head>
 
 <body>
   <header>
-    <nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="#">Gestão Financeira</a>
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Deslogar</a>
-        </li>
-      </ul>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Deslogar</a>
+          </li>
+        </ul>
+      </div>
     </nav>
+    
   </header>
+
+
 
   <main>
     <div class="container">
-      <div class="row">
-        <div class="col-md-6 offset-md-3">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
           <div class="card text-center mt-5">
             <div class="card-header bg-dark">
               Perfil Pessoal
             </div>
             <div class="card-body">
-              <h5 class="card-title">Bem-vindo(a)!</h5>
-              <p class="card-text">Aqui você pode gerenciar suas finanças pessoais, visualizar seus gastos, controlar seus
-                recibos e acompanhar gráficos estatísticos.</p>
-              <a href="expenses.html" class="btn btn-primary">Ver Gastos</a>
+              <div class="row">
+                <div class="col-sm-4">
+                  <img src="perfil.jpg" alt="Foto de Perfil" class="img-fluid rounded-circle">
+                </div>
+                <div class="col-sm-8">
+                  <h5 class="card-title">Bem-vindo(a)!</h5>
+                  <p class="card-text">Aqui você pode gerenciar suas finanças pessoais, visualizar seus gastos, controlar seus
+                    recibos e acompanhar gráficos estatísticos.</p>
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col-sm-8 offset-sm-4">
+                  <div id="chart"></div>
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col-md-12">
+                  <h5>Saldo: R$300,00</h5>
+                  <hr>
+                  <p>Anotações:</p>
+                  <textarea id="lembrete" class="form-control" rows="4"></textarea>
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col-md-12">
+                  <a href="expenses.html" class="btn btn-primary">Ver Gastos</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -41,15 +79,25 @@
     </div>
   </main>
   <footer class="mt-5">
-  <div class="container text-center color">
-    <p>Criado por Hgz</p>
-  </div>
-</footer>
+    <div class="container text-center">
+      <p>Criado por Hgz</p>
+    </div>
+  </footer>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-</body>
+  <script>
+    const textarea = document.getElementById('lembrete');
 
+    textarea.addEventListener('input', function() {
+      if (textarea.value !== '') {
+        textarea.placeholder = '';
+      } else {
+        textarea.placeholder = 'Digite aqui...';
+      }
+    });
+  </script>
+</body>
 
 </html>
