@@ -1,33 +1,75 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestão Financeira</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-
-
-  <title>Money Safe - Sobre</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <body>
   <header>
-    <h1  class="clr_ltt" >Bem-vindo ao Money Safe! </h1>
-    <nav>
-      <button onclick="location.href='index.html'" class="btn">Início</button>
-      <button onclick="location.href='about.html'" class="btn">Sobre</button>
-      <button onclick="location.href='login.html'" class="btn">Login</button>
-      <button onclick="location.href='register.html'" class="btn">Cadastro</button>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Gestão Financeira</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li>
+            <a href="login.html" class="nav-link">
+              <i class="fas fa-sign-in-alt"></i> Fazer login
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
     
   </header>
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <div class="card text-center mt-5">
+            <div class="card-header">
+              Mais Informações
+            </div>
+            <div class="card-body bg-light">
+              <h5 class="card-title">Gestão Financeira</h5>
+              <p class="card-text">Este projeto foi desenvolvido para auxiliar na gestão financeira pessoal, permitindo o
+                controle de gastos, gerenciamento de recibos e visualização de gráficos estatísticos.</p>
+              <p class="card-text">Com esta ferramenta, você poderá melhorar sua organização financeira e tomar decisões
+                mais conscientes em relação ao seu dinheiro.</p>
+                <div class="text-center">
+                  <a href="index.html" class="btn btn-primary">Voltar</a>
+                </div> 
+            </div>
+          </div>
 
-  <div class="container">
-    <h2 class="clr_ltt">Sobre o Money Safe</h2>
-    <p>O Money Safe é um aplicativo de gestão financeira que ajuda você a ter controle sobre suas finanças.</p>
-    <p>Aqui você pode acompanhar suas despesas, receitas, fazer planejamentos financeiros e muito mais.</p>
-  </div>
+            <div class="card-footer text-muted ">
+              Contato: contato@gestaofinanceira.com
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="mt-5">
+    <div class="container text-center color">
+      <p>Criado por Hgz</p>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </body>
+
+
 
 </html>
