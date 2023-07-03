@@ -1,33 +1,73 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestão Financeira</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-
-  <title>Money Safe - Página Inicial</title>
 </head>
 
 <body>
   <header>
-    <h1 class="clr_ltt">Bem-vindo ao Money Safe! </h1>
-    <nav>
-      <button onclick="location.href='index.html'" class="btn">Início</button>
-      <button onclick="location.href='about.html'" class="btn">Sobre</button>
-      <button onclick="location.href='login.html'" class="btn">Login</button>
-      <button onclick="location.href='register.html'" class="btn">Cadastro</button>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Gestão Financeira</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li>
+            <a href="login.html" class="nav-link">
+              <i class="fas fa-sign-in-alt"></i> Fazer login
+            </a>
+            
+          </li>
+
+        </ul>
+      </div>
     </nav>
+    
   </header>
 
-  <div class="container">
-    <h2  class="clr_ltt"> Uma breve explicação </h2>
-    <p>Um aplicativo de gestão financeira que ajuda você a ter controle sobre suas finanças.</p>
-    <p>Clique nos botões acima para explorar mais.</p>
-  </div>
-  
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <div class="card text-center mt-5">
+            <div class="card-header">
+              Gestão Financeira
+            </div>
+            <div class="card-body bg-light">
+              <h5 class="card-title">Informações Básicas</h5>
+              <p class="card-text">Este projeto é uma ferramenta de gestão financeira que ajuda no controle de gastos,
+                gerenciamento de recibos e exibição de gráficos estatísticos.</p>
+              <div class="text-center">
+                <a href="about.html" class="btn btn-primary">Saiba mais</a>
+              </div>
+            </div>
+            <div class="card-footer text-muted">
+              Contato: contato@gestaofinanceira.com
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </body>
+
+<footer class="mt-5">
+  <div class="container text-center color">
+    <p>Criado por Hgz</p>
+  </div>
+</footer>
 
 </html>

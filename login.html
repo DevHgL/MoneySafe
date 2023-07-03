@@ -1,40 +1,89 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestão Financeira - Login</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-
-  <title>Money Safe - Login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+  </style>
 </head>
 
 <body>
   <header>
-    <h1 class="clr_ltt">Bem-vindo ao Money Safe! </h1>
-    <nav>
-      <button onclick="location.href='index.html'" class="btn">Início</button>
-      <button onclick="location.href='about.html'" class="btn">Sobre</button>
-      <button onclick="location.href='login.html'" class="btn">Login</button>
-      <button onclick="location.href='register.html'" class="btn">Cadastro</button>
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Gestão Financeira</a>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">
+            <i class="fas fa-home"></i>
+          </a>
+        </li>
+      </ul>
     </nav>
+    
   </header>
 
-  <div class="container">
-    <h2  class="clr_ltt">Login</h2>
-    <!-- Formulário de login -->
-    <form>
-      <label  class="clr_ltt" for="username">Usuário:</label>
-      <input type="text" id="username" name="username" required>
+  <div class="wrapper">
+    <div class="card-switch">
+        <label class="switch">
+           <input type="checkbox" class="toggle">
+           <span class="slider"></span>
+           <span class="card-side"></span>
+           <div class="flip-card__inner">
+              <div class="flip-card__front">
+                 <div class="title">Log in</div>
+                 <form class="flip-card__form" action="">
+                    <input class="flip-card__input" name="email" placeholder="Email" type="email">
+                    <input class="flip-card__input" name="password" placeholder="Password" type="password">
+                    <button class="flip-card__btn">Let`s go!</button>
+                 </form>
+              </div>
+              <div class="flip-card__back">
+                 <div class="title">Sign up</div>
+                 <form class="flip-card__form" action="">
+                    <input class="flip-card__input" placeholder="Name" type="name">
+                    <input class="flip-card__input" name="email" placeholder="Email" type="email">
+                    <input class="flip-card__input" name="password" placeholder="Password" type="password">
+                    <button class="flip-card__btn">Confirm!</button>
+                 </form>
+              </div>
+           </div>
+        </label>
+    </div>   
+</div>
+  <footer class="mt-5">
+    <div class="container text-center">
+      <p>Criado por Hgz</p>
+    </div>
+  </footer>
 
-      <label class="clr_ltt" for="password">Senha:</label>
-      <input type="password" id="password" name="password" required>
-
-      <button type="submit" class="btn">Entrar</button>
-    </form>
-  </div>
-  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script>
+    document.querySelector(".flip-card__btn").addEventListener("click", function(event) {
+      event.preventDefault(); // Prevent form submission
+      
+      // Perform form validation
+      let email = document.querySelector(".flip-card__form input[name='email']").value;
+      let password = document.querySelector(".flip-card__form input[name='password']").value;
+      
+      if (email === "" && password === "") {
+        // Redirect to logged.html if login is successful
+        window.location.href = "logged.html";
+      } else {
+        alert("Login failed. Please check your email and password.");
+      }
+    });
+    
+  </script>
 </body>
 
 </html>
